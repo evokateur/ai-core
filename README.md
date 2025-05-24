@@ -8,23 +8,24 @@ I'm so happy you're joining me on this path. We'll be building immensely satisfy
 
 ### Before you begin
 
-I'm here to help you be most successful with your learning! If you hit any snafus, or if you have any ideas on how I can improve the course, please do reach out in the platform or by emailing me direct (ed@edwarddonner.com). It's always great to connect with people on LinkedIn to build up the community - you'll find me here:  
-https://www.linkedin.com/in/eddonner/  
+I'm here to help you be most successful with your learning! If you hit any snafus, or if you have any ideas on how I can improve the course, please do reach out in the platform or by emailing me direct (<ed@edwarddonner.com>). It's always great to connect with people on LinkedIn to build up the community - you'll find me here:  
+<https://www.linkedin.com/in/eddonner/>  
 And this is new to me, but I'm also trying out X/Twitter at [@edwarddonner](https://x.com/edwarddonner) - if you're on X, please show me how it's done 😂  
 
 Resources to accompany the course, including the slides and useful links, are here:  
-https://edwarddonner.com/2024/11/13/llm-engineering-resources/
+<https://edwarddonner.com/2024/11/13/llm-engineering-resources/>
 
-## Instant Gratification instructions for Week 1, Day 1 - with Llama 3.2 **not** Llama 3.3!
+## Instant Gratification instructions for Week 1, Day 1 - with Llama 3.2 **not** Llama 3.3
 
-### Important note: see my warning about Llama3.3 below - it's too large for home computers! Stick with llama3.2! Several students have missed this warning...
+### Important note: see my warning about Llama3.3 below - it's too large for home computers! Stick with llama3.2! Several students have missed this warning
 
 We will start the course by installing Ollama so you can see results immediately!
-1. Download and install Ollama from https://ollama.com noting that on a PC you might need to have administrator permissions for the install to work properly
+
+1. Download and install Ollama from <https://ollama.com> noting that on a PC you might need to have administrator permissions for the install to work properly
 2. On a PC, start a Command prompt / Powershell (Press Win + R, type `cmd`, and press Enter). On a Mac, start a Terminal (Applications > Utilities > Terminal).
 3. Run `ollama run llama3.2` or for smaller machines try `ollama run llama3.2:1b` - **please note** steer clear of Meta's latest model llama3.3 because at 70B parameters that's way too large for most home computers!  
 4. If this doesn't work: you may need to run `ollama serve` in another Powershell (Windows) or Terminal (Mac), and try step 3 again. On a PC, you may need to be running in an Admin instance of Powershell.  
-5. And if that doesn't work on your box, I've set up this on the cloud. This is on Google Colab, which will need you to have a Google account to sign in, but is free:  https://colab.research.google.com/drive/1-_f5XZPsChvfU1sJ0QqCePtIuc55LSdu?usp=sharing
+5. And if that doesn't work on your box, I've set up this on the cloud. This is on Google Colab, which will need you to have a Google account to sign in, but is free:  <https://colab.research.google.com/drive/1-_f5XZPsChvfU1sJ0QqCePtIuc55LSdu?usp=sharing>
 
 Any problems, please contact me!
 
@@ -76,7 +77,7 @@ print(response.choices[0].message.content)
 
 ### How this Repo is organized
 
-There are folders for each of the "weeks", representing modules of the class, culminating in a powerful autonomous Agentic AI solution in Week 8 that draws on many of the prior weeks.    
+There are folders for each of the "weeks", representing modules of the class, culminating in a powerful autonomous Agentic AI solution in Week 8 that draws on many of the prior weeks.
 Follow the setup instructions above, then open the Week 1 folder and prepare for joy.
 
 ### The most important part
@@ -90,6 +91,7 @@ You should be able to use the free tier or minimal spend to complete all the pro
 Learn about Google Colab and set up a Google account (if you don't already have one) [here](https://colab.research.google.com/)
 
 The colab links are in the Week folders and also here:  
+
 - For week 3 day 1, this Google Colab shows what [colab can do](https://colab.research.google.com/drive/1DjcrYDZldAXKJ08x1uYIVCtItoLPk1Wr?usp=sharing)
 - For week 3 day 2, here is a colab for the HuggingFace [pipelines API](https://colab.research.google.com/drive/1aMaEw8A56xs0bRM4lu8z7ou18jqyybGm?usp=sharing)
 - For week 3 day 3, here's the colab on [Tokenizers](https://colab.research.google.com/drive/1WD6Y2N7ctQi1X9wa6rpkg8UfyA4iSVuz?usp=sharing)
@@ -102,11 +104,36 @@ The colab links are in the Week folders and also here:
 You can keep your API spend very low throughout this course; you can monitor spend at the dashboards: [here](https://platform.openai.com/usage) for OpenAI, [here](https://console.anthropic.com/settings/cost) for Anthropic and [here](https://console.cloud.google.com/apis/api/generativelanguage.googleapis.com/cost) for Google Gemini.
 
 The charges for the exercsies in this course should always be quite low, but if you'd prefer to keep them minimal, then be sure to always choose the cheapest versions of models:
+
 1. For OpenAI: Always use model `gpt-4o-mini` in the code instead of `gpt-4o`
 2. For Anthropic: Always use model `claude-3-haiku-20240307` in the code instead of the other Claude models
 3. During week 7, look out for my instructions for using the cheaper dataset
 
-Please do message me or email me at ed@edwarddonner.com if this doesn't work or if I can help with anything. I can't wait to hear how you get on.
+Please do message me or email me at <ed@edwarddonner.com> if this doesn't work or if I can help with anything. I can't wait to hear how you get on.
+
+### Working with `upstream` in Your Fork
+
+#### Setting the `upstream` Remote
+
+```bash
+git remote add upstream git@github.com:ed-donner/llm_engineering.git
+```
+
+#### Keeping Your Fork Up-to-Date
+
+```bash
+git checkout main
+git fetch upstream
+git merge upstream/main
+git push origin main
+```
+
+#### Creating a Branch for Contributions
+
+```bash
+git fetch upstream
+git checkout -b my-contrib-branch upstream/main
+```
 
 <table style="margin: 0; text-align: left;">
     <tr>
