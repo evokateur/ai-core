@@ -132,7 +132,7 @@ git push origin main
 
 ```bash
 git fetch upstream
-git checkout -b my-contrib-branch upstream/main
+git checkout -b my-humble-contribution upstream/main
 ```
 
 <table style="margin: 0; text-align: left;">
