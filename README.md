@@ -111,7 +111,11 @@ The charges for the exercsies in this course should always be quite low, but if 
 
 Please do message me or email me at <ed@edwarddonner.com> if this doesn't work or if I can help with anything. I can't wait to hear how you get on.
 
-### README (for me, specifically)
+---
+
+## README (for me, specifically)
+
+### Working with `upstream` Remote
 
 #### Setting the `upstream` Remote
 
@@ -135,7 +139,7 @@ git fetch upstream
 git checkout -b my-humble-contribution upstream/main
 ```
 
-#### Setting Up (on macOS, w/o Conda)
+### Setting Up (on macOS, w/o Conda)
 
 ```sh
 git clone git@github.com:evokateur/llm_engineering.git
@@ -146,8 +150,7 @@ source llms/bin/activate
 pip install -r requirements.txt
 ```
 
-I find that, just after `pip install`, it will continue to use
-`/usr/local/bin/jupyter` until the next time the venv is activated.
+Reactivate to update `$PATH`, and ascertain it's not using `/usr/local/bin/jupyter`
 
 ```sh
 deactivate
