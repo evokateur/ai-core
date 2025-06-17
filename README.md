@@ -111,7 +111,7 @@ The charges for the exercsies in this course should always be quite low, but if 
 
 Please do message me or email me at <ed@edwarddonner.com> if this doesn't work or if I can help with anything. I can't wait to hear how you get on.
 
-### Working with `upstream` in Your Fork
+### README (for me, specifically)
 
 #### Setting the `upstream` Remote
 
@@ -119,7 +119,7 @@ Please do message me or email me at <ed@edwarddonner.com> if this doesn't work o
 git remote add upstream git@github.com:ed-donner/llm_engineering.git
 ```
 
-#### Keeping Your Fork Up-to-Date
+#### Keeping the Fork Up-to-Date
 
 ```bash
 git checkout main
@@ -134,6 +134,28 @@ git push origin main
 git fetch upstream
 git checkout -b my-humble-contribution upstream/main
 ```
+
+#### Setting Up (on macOS, w/o Conda)
+
+```sh
+git clone git@github.com:evokateur/llm_engineering.git
+cd llm_engineering
+pyenv shell 3.11
+python -m venv llms
+source llms/bin/activate
+pip install -r requirements.txt
+```
+
+I find that, just after `pip install`, it will continue to use
+`/usr/local/bin/jupyter` until the next time the venv is activated.
+
+```sh
+deactivate
+source llms/bin/activate
+which jupyter
+```
+
+---
 
 <table style="margin: 0; text-align: left;">
     <tr>
