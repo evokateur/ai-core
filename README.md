@@ -139,7 +139,7 @@ git fetch upstream
 git checkout -b my-humble-contribution upstream/main
 ```
 
-### Setting Up (on macOS, w/o Conda)
+### Setting Up w/o Conda
 
 ```sh
 git clone git@github.com:evokateur/llm_engineering.git
