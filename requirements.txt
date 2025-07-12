@@ -17,7 +17,6 @@ langchain[docarray]
 langchain_chroma
 langchain_experimental
 matplotlib
-matplotlib
 modal
 numpy
 ollama
