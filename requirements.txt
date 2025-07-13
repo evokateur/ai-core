@@ -7,7 +7,7 @@ datasets
 feedparser
 gensim
 google-generativeai
-gradio
+gradio==5.34.0
 ipywidgets
 jupyter-dash
 jupyterlab
