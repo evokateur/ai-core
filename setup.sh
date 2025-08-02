@@ -1,12 +1,5 @@
 #!/bin/bash
 
-if ! command -v pyenv >/dev/null; then
-    echo "pyenv not found, exiting.."
-    exit 1
-fi
-
-pyenv shell 3.11
-
 PYTHON_VERSION=$(python --version 2>&1)
 if ! echo "$PYTHON_VERSION" | grep -q "^Python 3\.11"; then
     echo "Setup requires python 3.11, exiting.."
