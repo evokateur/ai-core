@@ -15,4 +15,4 @@ pip install -r requirements.txt
 echo "Installing Jupyter kernel spec for $(pwd)/llms.."
 python -m ipykernel install --user --env VIRTUAL_ENV "$(pwd)/llms" --name=llm_engineering --display-name "LLM Engineering"
 
-echo "Use kernel 'llm_engineering' in Jupyter notebooks."
+echo "Select 'llm_engineering' kernel in Jupyter notebooks, or when running :MoltenInit"
