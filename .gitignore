@@ -194,3 +194,5 @@ challenge/
 # WandB local sync data.
 wandb/
 
+# ignore temp molten.nvim buffers created for **/day[0-9]*.ipynb buffers
+**/day[0-9]*.md
