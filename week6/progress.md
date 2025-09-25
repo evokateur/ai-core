@@ -13,3 +13,6 @@
   - sfizio:code/llm_engineering/week6/train.pkl
 
 - [ ] confirm that tokenizer tokenized all 3 digit prices into 1 token (how?)
+
+- [x] `day3.ipynb`
+  - followed along with the video (except for the stuff that was resource intensive)
