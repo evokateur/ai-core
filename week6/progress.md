@@ -16,3 +16,6 @@
 
 - [x] `day3.ipynb`
   - followed along with the video (except for the stuff that was resource intensive)
+
+- [x] day4.ipynb
+  - followed along with the video (did not run the frontier model tests)
