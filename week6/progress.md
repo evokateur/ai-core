@@ -19,3 +19,6 @@
 
 - [x] day4.ipynb
   - followed along with the video (did not run the frontier model tests)
+
+- [x] day5.ipynb
+  - followed along with the video, ran fine tuning, tested the model
