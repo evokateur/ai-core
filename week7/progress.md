@@ -14,7 +14,7 @@
   - [x] generate lite data
   - Alternately, I can figure out what sort of box I *can* use with Colab Pro @ 9.99/mo..
 
-- [ ] Day 5
+- [x] Day 5
 
 ## Notes
 
@@ -76,6 +76,46 @@
 - Can be expensive, and something to change if there are memory issues
 - The most common is Adam or AdamW (Adam with Weight Decay)
   - Adam achieves good convergence by storing the rolling average of the previous gradients; however, it adds an additional memory footprint of the order of the number of model parameters.
+
+### The Four Steps in Training
+
+#### 1. Forward Pass
+
+- Predict the next token in training data
+
+#### 2. Loss Calculation
+
+- How different was it to the true next token?
+
+#### 3. Backward Pass
+
+- How much should we tweak parameters to do better next time (the "gradients"[^2])?
+- Also called "back prop" or "back propagation"
+- Take Loss, look back through the neural network, and ask the question: "If I were to tweak each of the parameters in this neural network by a little tiny bit, would it have made this loss bigger or smaller?" How does each particular weight vary the loss? Calculating the gradients of all of your wights.
+
+#### 4. Optimization Step
+
+- Update parameters based on the gradients (the "step"[^3])
+- You want to try to do it in a way that will generalize well, avoiding overfitting
+
+### Next Token Prediction and Cross-Entropy Loss
+
+#### The Model Output
+
+- The model doesn't simply "Predict the next token"
+- Rather, it outputs a probabilities of all possible next tokens
+  - This is the result of using the 'softmax' function over the output from the last layer
+
+- During inference, you can pick the token with highest probability, or sample from possible next tokens
+
+#### The Loss Function
+
+- The approach for calculating loss is quite simple:
+  - Just ask: what probability did the model assign to the token that actually was the correct next token?
+  - In practice we then take the log of this probability and multiply it by -1
+  - So 0 means we were 100% confident of the right result; higher numbers mean lower confidence
+
+- This is called *cross-entropy loss*
 
 [^1]: Do you stop at that point?
 
