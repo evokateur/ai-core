@@ -8,9 +8,8 @@ CHUNK_SIZE = 1000
 MIN_PRICE = 0.5
 MAX_PRICE = 999.49
 
+
 class ItemLoader:
-
-
     def __init__(self, name):
         self.name = name
         self.dataset = None
@@ -21,7 +20,7 @@ class ItemLoader:
         Return the Item if successful, or None if it shouldn't be included
         """
         try:
-            price_str = datapoint['price']
+            price_str = datapoint["price"]
             if price_str:
                 price = float(price_str)
                 if MIN_PRICE <= price <= MAX_PRICE:
@@ -57,25 +56,32 @@ class ItemLoader:
         results = []
         chunk_count = (len(self.dataset) // CHUNK_SIZE) + 1
         with ProcessPoolExecutor(max_workers=workers) as pool:
-            for batch in tqdm(pool.map(self.from_chunk, self.chunk_generator()), total=chunk_count):
+            for batch in tqdm(
+                pool.map(self.from_chunk, self.chunk_generator()), total=chunk_count
+            ):
                 results.extend(batch)
         for result in results:
             result.category = self.name
         return results
-            
-    def load(self, workers=8):
+
+    def load(self, workers=4):
         """
         Load in this dataset; the workers parameter specifies how many processes
         should work on loading and scrubbing the data
         """
         start = datetime.now()
         print(f"Loading dataset {self.name}", flush=True)
-        self.dataset = load_dataset("McAuley-Lab/Amazon-Reviews-2023", f"raw_meta_{self.name}", split="full", trust_remote_code=True)
+        self.dataset = load_dataset(
+            "McAuley-Lab/Amazon-Reviews-2023",
+            f"raw_meta_{self.name}",
+            split="full",
+            trust_remote_code=True,
+        )
         results = self.load_in_parallel(workers)
         finish = datetime.now()
-        print(f"Completed {self.name} with {len(results):,} datapoints in {(finish-start).total_seconds()/60:.1f} mins", flush=True)
+        print(
+            f"Completed {self.name} with {len(results):,} datapoints in {(finish - start).total_seconds() / 60:.1f} mins",
+            flush=True,
+        )
         return results
-        
 
-    
-    

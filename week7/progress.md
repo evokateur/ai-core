@@ -11,7 +11,7 @@
 
 - [x] Day 4
   - Can use data generated in [`week6/lite.ipynb`](../week6/lite.ipynb) to train on a T4 box in a reasonable amount of time.
-  - [ ] generate lite data
+  - [x] generate lite data
   - Alternately, I can figure out what sort of box I *can* use with Colab Pro @ 9.99/mo..
 
 - [ ] Day 5
