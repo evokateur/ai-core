@@ -1,10 +1,20 @@
 # Week 7 Progress
 
-- [x] Day 1 Colab
+- [x] Day 1
+  - watched and learned
 
-- [x] Day 2 Colab (watched)
+- [x] Day 2
+  - watched and learned
 
-- [ ] Day 3 [Colab](https://colab.research.google.com/drive/1XCfjdYgnJMzsegjKYkPdm7BRla-BIZwa#scrollTo=uuTX-xonNeOK)
+- [x] Day 3 [Colab](https://colab.research.google.com/drive/1XCfjdYgnJMzsegjKYkPdm7BRla-BIZwa#scrollTo=uuTX-xonNeOK)
+  - attempted to run training on T4 with the large dataset but got disconnected before it finished. It probably would have taken too long (see below)
+
+- [x] Day 4
+  - Can use data generated in [`week6/lite.ipynb`](../week6/lite.ipynb) to train on a T4 box in a reasonable amount of time.
+  - [ ] generate lite data
+  - Alternately, I can figure out what sort of box I *can* use with Colab Pro @ 9.99/mo..
+
+- [ ] Day 5
 
 ## Notes
 
