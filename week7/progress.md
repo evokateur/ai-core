@@ -15,6 +15,8 @@
   - Alternately, I can figure out what sort of box I *can* use with Colab Pro @ 9.99/mo..
 
 - [x] Day 5
+  - [Completed training on appliances data](https://colab.research.google.com/drive/1XUSkfWIhp2YEG0Q3NHfxd6zN4N7qizgl#scrollTo=cvXVoJH8LS6u)
+  - [Ran inference on trained model](https://colab.research.google.com/drive/1Xhkq1TUn4xY_Jn8dBtQNlM58dMQgT65O#scrollTo=M4NSMcKl3Bhw)
 
 ## Notes
 
