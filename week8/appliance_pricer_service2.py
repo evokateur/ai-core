@@ -2,7 +2,7 @@ import modal
 from modal import App, Volume, Image
 # Setup - define our infrastructure with code!
 
-app = modal.App("pricer-service")
+app = modal.App("appliance-pricer-service")
 image = Image.debian_slim().pip_install(
     "huggingface", "torch", "transformers", "bitsandbytes", "accelerate", "peft"
 )
@@ -39,7 +39,7 @@ hf_cache_volume = Volume.from_name("hf-hub-cache", create_if_missing=True)
     min_containers=MIN_CONTAINERS,
     volumes={CACHE_DIR: hf_cache_volume},
 )
-class Pricer:
+class AppliancePricer:
     @modal.enter()
     def setup(self):
         import torch
