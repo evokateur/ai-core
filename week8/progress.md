@@ -11,9 +11,9 @@
   100%|██████████| 400/400 [17:31:43<00:00, 157.76s/it]
   ```
 
-- [ ] `day2.1.ipynb`
+- [x] `day2.1.ipynb` gave up on getting it to work in molten and finally visualized in browser
 
-- [ ] `day2.2.ipynb`
+- [x] `day2.2.ipynb` (visualized)
 
 - [ ] `day2.3.ipynb`
 
