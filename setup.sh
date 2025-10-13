@@ -1,14 +1,14 @@
 #!/bin/bash
 
-if command -v python3.11 >/dev/null 2>&1; then
-    PYTHON=python3.11
-else
-    echo "Setup requires python 3.11, exiting.."
+version=$(python --version 2>&1)
+
+if [[ ! $version =~ ^Python\ 3\.11 ]]; then
+    echo 'wrong python (run: "pyenv shell 3.11"), exiting..'
     exit 1
 fi
 
 echo "[Re]creating virtual environment and installing dependencies.."
-$PYTHON -m venv llms --clear
+python -m venv llms --clear
 source llms/bin/activate
 pip install -r requirements.txt
 
