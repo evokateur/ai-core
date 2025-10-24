@@ -15,6 +15,6 @@
 
 - [x] `day2.2.ipynb` (visualized)
 
-- [ ] `day2.3.ipynb`
+- [x] `day2.3.ipynb`
 
 - [ ] `day2.4.ipynb`
