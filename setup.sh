@@ -1,18 +1,18 @@
 #!/bin/bash
 
-version=$(python --version 2>&1)
+echo "Making sure you have the latest version of uv.."
+uv self update
 
-if [[ ! $version =~ ^Python\ 3\.11 ]]; then
-    echo 'wrong python (run: "pyenv shell 3.11"), exiting..'
-    exit 1
-fi
-
-echo "[Re]creating virtual environment and installing dependencies.."
-python -m venv llms --clear
-source llms/bin/activate
-pip install -r requirements.txt
+echo "Running uv sync to install dependencies.."
+uv sync
 
 echo "Installing Jupyter kernel spec for $(pwd)/llms.."
-python -m ipykernel install --user --env VIRTUAL_ENV "$(pwd)/llms" --name=llm_engineering --display-name "LLM Engineering"
-
-echo "Select 'llm_engineering' kernel in Jupyter notebooks, or when running :MoltenInit"
+python -m ipykernel install --user --env VIRTUAL_ENV $(pwd)/.venv --name=llm_engineering --display-name "LLM Engineering"
+echo
+echo "To launch Jupyter Lab in the uv environment:"
+echo " uv run --with jupyter jupyter lab"
+echo
+echo "To launch nvim in the uv environment (for molten.nvim):"
+echo " uv run nvim"
+echo
+echo "Select the 'llm_engineering' kernel when working with notebooks in the web UI or when running :MoltenInit"
