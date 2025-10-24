@@ -15,4 +15,4 @@ echo
 echo "To launch nvim in the uv environment (for molten.nvim):"
 echo " uv run nvim"
 echo
-echo "Select the 'llm_engineering' kernel when working with notebooks in the web UI or when running :MoltenInit"
+echo "Select the 'llm_engineering' kernel when working with notebooks in the web UI or running :MoltenInit"
