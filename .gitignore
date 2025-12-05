@@ -206,5 +206,13 @@ week4/main.rs
 week5/preprocessed_db/
 week5/vector_db/
 
-
 local/
+
+week6/full/
+week6/lite/
+week6/*/*.pkl
+week6/*/*.jsonl
+week6/jsonl/
+week6/*.pth
+week6/*.joblib
+week8/*.pth
