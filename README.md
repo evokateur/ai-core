@@ -172,25 +172,6 @@ git fetch upstream
 git checkout -b my-humble-contribution upstream/main
 ```
 
-### Setting Up w/o Conda
-
-```sh
-git clone git@github.com:evokateur/llm_engineering.git
-cd llm_engineering
-pyenv shell 3.11
-python -m venv llms
-source llms/bin/activate
-pip install -r requirements.txt
-```
-
-Reactivate to update `$PATH`, and ascertain it's not using `/usr/local/bin/jupyter`
-
-```sh
-deactivate
-source llms/bin/activate
-which jupyter
-```
-
 ---
 
 <table style="margin: 0; text-align: left;">
