@@ -8,7 +8,7 @@ _If you're looking at this in Cursor, please right click on the filename in the 
 
 I'm so happy you're joining me on this path. We'll be building immensely satisfying projects in the coming weeks. Some will be easy, some will be challenging, many will ASTOUND you! The projects build on each other so you develop deeper and deeper expertise each week. One thing's for sure: you're going to have a lot of fun along the way.
 
-# IMPORTANT ANNOUNCEMENT - OCTOBER 2025 - PLEASE READ
+## IMPORTANT ANNOUNCEMENT - DECEMBER 2025 - PLEASE READ
 
 I am phasing in new, updated versions of all the course videos, with new videos and new code. I realize this can be jarring for people already on the course, and I will do my best to make this as smooth as possible.
 
@@ -33,14 +33,14 @@ Section 3 = NEW WEEK 3
 Section 4 = NEW WEEK 4  
 Section 5 = NEW WEEK 5  
 Section 6 = NEW WEEK 6  
-Section 7 = Original Week 7   
-Section 8 = Original Week 8   
+Section 7 = Original Week 7
+Section 8 = Original Week 8
 
 Then as an appendix / archive:
 
 Section 9 = Original Week 1  
 Section 10 = Original Week 2  
-Section 11 = Original Week 3    
+Section 11 = Original Week 3
 Section 12 = Original Week 4  
 Section 13 = Original Week 5  
 Section 14 = Original Week 6  
